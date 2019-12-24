@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iQh-Ap-qXe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Is it-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="is_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0BY-58-dwO">
+                                <rect key="frame" x="20" y="108" width="374" height="192"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReT-d1-ySH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Is it Friday?">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Be5-iP-Mbi" kind="show" id="FcI-Lk-b7N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-i3-Lws">
+                                        <rect key="frame" x="0.0" y="53" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Is it my Birthday?">
+                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="em8-1o-3gW" kind="show" id="Q6G-mg-oQv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-RK-jz2">
+                                        <rect key="frame" x="0.0" y="106" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Is it a day off?">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="96u-hA-e78" kind="show" id="rDZ-tX-LrM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQH-6u-MrL">
+                                        <rect key="frame" x="0.0" y="159" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Is it a nice day Today?">
+                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="zQN-J4-AK8" kind="show" id="eUf-yY-N9b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0BY-58-dwO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3Hx-GJ-5wR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0BY-58-dwO" secondAttribute="bottom" constant="20" id="5Ff-FO-q2F"/>
+                            <constraint firstItem="0BY-58-dwO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Voa-ht-3Bm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0BY-58-dwO" secondAttribute="trailing" constant="20" id="XJs-jg-U0I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Is it" largeTitleDisplayMode="always" id="Xwm-11-W1s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--My Birthday?-->
+        <scene sceneID="eIX-3n-p9u">
+            <objects>
+                <viewController id="em8-1o-3gW" customClass="BirthdayViewController" customModule="is_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eG6-sP-dQz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T9k-X1-rdj">
+                                <rect key="frame" x="20" y="108" width="374" height="144.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When is your Birthday?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-fp-a23">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dd.mm.yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-8h-6mI">
+                                        <rect key="frame" x="0.0" y="50.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-BB-45Z">
+                                        <rect key="frame" x="0.0" y="114.5" width="374" height="30"/>
+                                        <state key="normal" title="Is Today really my Birthday?"/>
+                                        <connections>
+                                            <action selector="birthdayButtonTapped:" destination="em8-1o-3gW" eventType="touchUpInside" id="HoH-3z-wWg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T9k-X1-rdj" firstAttribute="top" secondItem="3Ky-bn-pS0" secondAttribute="top" constant="20" id="0Hg-Zl-7YU"/>
+                            <constraint firstItem="3Ky-bn-pS0" firstAttribute="trailing" secondItem="T9k-X1-rdj" secondAttribute="trailing" constant="20" id="42f-WO-eYm"/>
+                            <constraint firstItem="3Ky-bn-pS0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="T9k-X1-rdj" secondAttribute="bottom" constant="20" id="7We-fK-Qze"/>
+                            <constraint firstItem="T9k-X1-rdj" firstAttribute="leading" secondItem="3Ky-bn-pS0" secondAttribute="leading" constant="20" id="G7m-wl-tCt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Ky-bn-pS0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Birthday?" id="b2D-ss-GLH"/>
+                    <connections>
+                        <outlet property="birthdayTextField" destination="w4j-8h-6mI" id="5YE-56-HdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcc-nH-zIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="878"/>
+        </scene>
+        <!--A Day Off?-->
+        <scene sceneID="Aly-6j-eLq">
+            <objects>
+                <viewController id="96u-hA-e78" customClass="DayOffViewController" customModule="is_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dph-1V-JKO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No, because you are writing UI tests for this app right now! 🤪 Keep working!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vox-gi-Wrh">
+                                <rect key="frame" x="20" y="393" width="374" height="164"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vox-gi-Wrh" firstAttribute="centerY" secondItem="pXZ-sk-sfH" secondAttribute="centerY" id="9e4-6a-7tR"/>
+                            <constraint firstItem="vox-gi-Wrh" firstAttribute="trailing" secondItem="pXZ-sk-sfH" secondAttribute="trailing" constant="-20" id="FVf-kM-K6B"/>
+                            <constraint firstItem="vox-gi-Wrh" firstAttribute="leading" secondItem="pXZ-sk-sfH" secondAttribute="leading" constant="20" id="aV7-Aq-l8a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pXZ-sk-sfH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="A Day Off?" id="3Av-eQ-QmU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxk-zJ-F1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="878"/>
+        </scene>
+        <!--A Nice Day Today?-->
+        <scene sceneID="jzc-Yn-xiX">
+            <objects>
+                <viewController id="zQN-J4-AK8" customClass="NiceDayViewController" customModule="is_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phY-C9-b5o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-bU-zHe">
+                                <rect key="frame" x="20" y="108" width="374" height="145"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't know, you tell me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-HQ-0y6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="81Y-ck-w6l">
+                                        <rect key="frame" x="-2" y="60.5" width="378" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="sliderMoved:" destination="zQN-J4-AK8" eventType="valueChanged" id="lb8-Vb-eSU"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like every other day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFb-FG-Ga6">
+                                        <rect key="frame" x="0.0" y="130.5" width="374" height="14.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mIW-mB-I2U" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yEz-bU-zHe" secondAttribute="bottom" constant="20" id="5op-AL-n5W"/>
+                            <constraint firstItem="yEz-bU-zHe" firstAttribute="top" secondItem="mIW-mB-I2U" secondAttribute="top" constant="20" id="A6s-vw-Y91"/>
+                            <constraint firstItem="yEz-bU-zHe" firstAttribute="leading" secondItem="mIW-mB-I2U" secondAttribute="leading" constant="20" id="cG7-Pk-FX4"/>
+                            <constraint firstItem="mIW-mB-I2U" firstAttribute="trailing" secondItem="yEz-bU-zHe" secondAttribute="trailing" constant="20" id="pWP-qb-TxC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mIW-mB-I2U"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="A Nice Day Today?" id="wBR-Tb-yQ2"/>
+                    <connections>
+                        <outlet property="moodLabel" destination="nFb-FG-Ga6" id="E0Y-gg-40f"/>
+                        <outlet property="moodSlider" destination="81Y-ck-w6l" id="oqx-sK-Ttn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdL-nI-zwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511" y="874"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rkh-xz-vPI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iQh-Ap-qXe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qN7-qm-HEg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aM6-YX-wOa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smc-v4-Xm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Friday?-->
+        <scene sceneID="ePm-X5-Peq">
+            <objects>
+                <viewController id="Be5-iP-Mbi" customClass="FridayViewController" customModule="is_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IiM-KG-j4a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-Ur-kri">
+                                <rect key="frame" x="189.5" y="458.5" width="35.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fVH-Ur-kri" firstAttribute="centerX" secondItem="pSl-sa-FBS" secondAttribute="centerX" id="AOp-fC-ARS"/>
+                            <constraint firstItem="fVH-Ur-kri" firstAttribute="centerY" secondItem="pSl-sa-FBS" secondAttribute="centerY" id="kPP-X1-AJJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pSl-sa-FBS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friday?" id="kCg-Sy-cmA"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="fVH-Ur-kri" id="jJg-SQ-VUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0L-95-0Rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="878"/>
+        </scene>
+    </scenes>
+</document>
