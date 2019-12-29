@@ -22,6 +22,12 @@ class is_itUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func openApp() -> XCUIApplication {
+        let app = XCUIApplication()
+        app.launch()
+        return app
+    }
 
     /*
      Test cases
@@ -33,11 +39,12 @@ class is_itUITests: XCTestCase {
          1. Open application
          2. Click on the "Is it Friday?"
          3. Verify that the application shows answer "No"
-
-         Note: Don't worry if current day is Friday, try to write this test on another day.
          */
 
-        // Your code goes here
+        let app = openApp()
+        app.buttons["IsFriday"].tap()
+        let isFridayValue = app.staticTexts["IsFridayLabel"].label
+        XCTAssertEqual(isFridayValue, "No")
     }
 
     func testMyBirthdayIsNotToday() {
@@ -52,7 +59,15 @@ class is_itUITests: XCTestCase {
          7. Click on the "Ahh, right"
          */
 
-        // Your code goes here
+        let app = openApp()
+        app.buttons["IsBirthday"].tap()
+        app.textFields.element.tap()
+        app.textFields.element.typeText("01.01.2000")
+        app.buttons["IsBirthdayTodayBtn"].tap()
+        let notBirthdayAlert = app.alerts["Haha, you wish, Today is not your birthday and you know it!"]
+        XCTAssertTrue(notBirthdayAlert.exists)
+        XCTAssertTrue(notBirthdayAlert.buttons["Ahh, right"].exists)
+        notBirthdayAlert.buttons["Ahh, right"].tap()
     }
 
     func testIfTodayIsDayOff() {
@@ -65,7 +80,8 @@ class is_itUITests: XCTestCase {
          Note: For verification, please use "element(boundBy:)" method
          */
 
-        // Your code goes here
+        let app = openApp()
+        app.buttons["IsDayOff"].tap()
     }
 
     func testItIsAWunderfulDayToday() {
@@ -77,7 +93,8 @@ class is_itUITests: XCTestCase {
          4. Verify that the text right below the slider shows "It was such an awesome day! :)"
          */
 
-        // Your code goes here
+        let app = openApp()
+        app.buttons["IsNiceDay"].tap()
     }
 
     func testTodaysMoodHave4AvailableValues() {
