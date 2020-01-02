@@ -43,8 +43,7 @@ class is_itUITests: XCTestCase {
 
         let app = openApp()
         app.buttons["IsFriday"].tap()
-        let isFridayValue = app.staticTexts["IsFridayLabel"].label
-        XCTAssertEqual(isFridayValue, "No")
+        XCTAssertEqual(app.staticTexts["IsFridayLabel"].label, "No")
     }
 
     func testMyBirthdayIsNotToday() {
@@ -82,6 +81,8 @@ class is_itUITests: XCTestCase {
 
         let app = openApp()
         app.buttons["IsDayOff"].tap()
+        let contentElement = app.staticTexts.element(boundBy: 1)
+        XCTAssertEqual(contentElement.label, "No, because you are writing UI tests for this app right now! 🤪 Keep working!")
     }
 
     func testItIsAWunderfulDayToday() {
@@ -95,6 +96,8 @@ class is_itUITests: XCTestCase {
 
         let app = openApp()
         app.buttons["IsNiceDay"].tap()
+        app.sliders["MoodSlider"].adjust(toNormalizedSliderPosition: 1)
+        XCTAssertEqual(app.staticTexts["MoodLabel"].label, "It was such an awesome day! :)")
     }
 
     func testTodaysMoodHave4AvailableValues() {
@@ -113,8 +116,20 @@ class is_itUITests: XCTestCase {
          11. Move the slider to 90%,    for example ---------O-
          12. Verify that the text right below the slider shows "It was such an awesome day! :)"
          */
-
-        // Your code goes here
+        
+        let testExamples = [
+            0.1: "It was awful day!",
+            0.3: "It could been better",
+            0.5: "It was like every other day, nothing special",
+            0.7: "It was wonderful day",
+            0.9: "It was such an awesome day! :)"
+        ]
+        let app = openApp()
+        app.buttons["IsNiceDay"].tap()
+        for example in testExamples {
+            app.sliders["MoodSlider"].adjust(toNormalizedSliderPosition: CGFloat(example.key))
+            XCTAssertEqual(app.staticTexts["MoodLabel"].label, example.value)
+        }
     }
 
     func testEachApplicationSection() {
@@ -131,7 +146,11 @@ class is_itUITests: XCTestCase {
          9. Click the back button
          */
 
-        // Your code goes here
+        let app = openApp()
+        for i in 0...3 {
+            app.buttons.element(boundBy: i).tap()
+            app.buttons["Is it"].tap()
+        }
     }
 
     // ---------- Bonus test (not mandatory) ----------
@@ -148,7 +167,6 @@ class is_itUITests: XCTestCase {
          2. Be aware that weekday units are the numbers 1 through n, where n is the number of days in the week. For example, in the Gregorian calendar (which is the default one), n is 7 and Sunday is represented by 1.
          https://developer.apple.com/documentation/foundation/nsdatecomponents/1410442-weekday
          */
-
-        // Your code goes here
+        
     }
 }
