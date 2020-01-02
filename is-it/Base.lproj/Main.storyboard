@@ -179,6 +179,7 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="81Y-ck-w6l">
                                         <rect key="frame" x="-2" y="60.5" width="378" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="MoodSlider"/>
                                         <color key="minimumTrackTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="sliderMoved:" destination="zQN-J4-AK8" eventType="valueChanged" id="lb8-Vb-eSU"/>
@@ -186,6 +187,7 @@
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like every other day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFb-FG-Ga6">
                                         <rect key="frame" x="0.0" y="130.5" width="374" height="14.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="MoodLabel"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
