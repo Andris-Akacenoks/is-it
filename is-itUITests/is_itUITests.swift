@@ -168,5 +168,10 @@ class is_itUITests: XCTestCase {
          https://developer.apple.com/documentation/foundation/nsdatecomponents/1410442-weekday
          */
         
+        let app = openApp()
+        app.buttons["IsFriday"].tap()
+        let day = Calendar.current.component(.weekday, from: Date())
+        let expectedString = (day == 4) ? "YES!" : "No"
+        XCTAssertEqual(app.staticTexts["IsFridayLabel"].label, expectedString)
     }
 }
